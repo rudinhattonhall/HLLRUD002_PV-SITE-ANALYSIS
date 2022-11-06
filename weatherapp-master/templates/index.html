@@ -3,7 +3,7 @@
  
 <head> 
   <meta charset="utf-8"> 
-  <title>weather</title> 
+  <title>UCT Upper Campus PV sites analysis</title> 
   <!-- Latest compiled and minified CSS --> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
  
@@ -20,8 +20,8 @@
     <h1 class="col-md-3 text-center">UCT PV Generation</h1> 
   </nav>
   <br />
-  <center
-    <img src="/static/images/University_of_Cape_Town_logo.svg.png" width="150" height="150" name="myImage" id="University_of_Cape_Town_logo" /> 
+  <center>
+    <img src="/static/images/University_of_Cape_Town_logo.svg.png" width="350" height="350" name="myImage" id="University_of_Cape_Town_logo" /> 
   <center>
 
   <br /> 
@@ -51,8 +51,8 @@
   </div> 
  
   <center>
-    <h3>Actual PV</h3>
-    <img src="/static/images/Image1.jpg" width="300" height="300" name="myImage" id="image" /> 
+    <h3>Actual PV Generation</h3>
+    <img src="/static/images/Image1.jpg" width="550" height="400" name="myImage" id="image" /> 
     <form method="" action="" name="myForm"> 
       <select id="switch" size="8" name="switch"> 
         <option value="Image1">13/10/2022</option> 
@@ -79,10 +79,10 @@
 <br />
 
 <center>
-  <h3>Simulated PV</h3>
-  <img src="/static/images/Image8.jpg" width="300" height="300" name="myImage2" id="image2" /> 
+  <h3>Simulated PV Generation</h3>
+  <img src="/static/images/Image8.jpg" width="550" height="400" name="myImage2" id="image2" /> 
   <form method="" action="" name="myForm2"> 
-    <select id="switch" size="8" name="switch"> 
+    <select id="switch2" size="8" name="switch2"> 
       <option value="Image8">13/10/2022</option> 
       <option value="Image9">14/10/2022</option> 
       <option value="Image10">15/10/2022</option> 
@@ -93,10 +93,10 @@
     </select> 
   </form> 
   <script> 
-    const switches2 = document.getElementById("switch"); 
-    switches.addEventListener("change", (e) => { 
-      const images = document.getElementById('image'); 
-      images.setAttribute("src", window.location + "static/images/" + e.target.value + ".jpg"); 
+    const switches2 = document.getElementById("switch2"); 
+    switches2.addEventListener("change", (e) => { 
+      const images2 = document.getElementById('image2'); 
+      images2.setAttribute("src", window.location + "static/images/" + e.target.value + ".jpg"); 
     }); 
   </script> 
 </center>
