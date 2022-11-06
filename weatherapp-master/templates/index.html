@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en" dir="ltr"> 
+ 
+<head> 
+  <meta charset="utf-8"> 
+  <title>weather</title> 
+  <!-- Latest compiled and minified CSS --> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+ 
+  <!-- jQuery library --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+ 
+  <!-- Latest compiled JavaScript --> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+ 
+</head> 
+ 
+<body> 
+  <nav class="row" style="background: #337ab7; color: white;"> 
+    <h1 class="col-md-3 text-center">UCT PV Generation</h1> 
+  </nav>
+  <br />
+  <center
+    <img src="/static/images/University_of_Cape_Town_logo.svg.png" width="150" height="150" name="myImage" id="University_of_Cape_Town_logo" /> 
+  <center>
+
+  <br /> 
+  <center class="row"> 
+    <form method="post" class="col-md-6 col-md-offset-3"> 
+      <div class="input-group"> 
+        <input type="text" class="form-control" name="city" placeholder="Search"> 
+        <div class="input-group-btn"> 
+          <button class="btn btn-primary" type="submit"> 
+            <i class="glyphicon glyphicon-search"></i> 
+          </button> 
+        </div> 
+        <form> 
+  </center> 
+  <div class="row"> 
+    {% if data.country_code and data.coordinate and data.temp and data.pressure and data.humidity %} 
+    <div class="col-md-6 col-md-offset-3"> 
+      <h3>country code : {{data.country_code}}</h1> 
+        <h5>City name : {{data.cityname}}</h5> 
+        <h5>coordinate : {{data.coordinate}}</h5> 
+        <h5>temp (in kelvin) : {{data.temp}}</h5> 
+        <h5>temp (in celcius) : {{data.temp_cel}}</h5> 
+        <h5>pressure : {{data.pressure}} </h5> 
+        <h5>humidity : {{data.humidity}}</h5> 
+    </div> 
+    {% endif %} 
+  </div> 
+ 
+  <center>
+    <h3>Actual PV</h3>
+    <img src="/static/images/Image1.jpg" width="300" height="300" name="myImage" id="image" /> 
+    <form method="" action="" name="myForm"> 
+      <select id="switch" size="8" name="switch"> 
+        <option value="Image1">13/10/2022</option> 
+        <option value="Image2">14/10/2022</option> 
+        <option value="Image3">15/10/2022</option> 
+        <option value="Image4">16/10/2022</option> 
+        <option value="Image5">17/10/2022</option> 
+        <option value="Image6">18/10/2022</option> 
+        <option value="Image7">19/10/2022</option> 
+      </select> 
+    </form> 
+    <script> 
+      const switches = document.getElementById("switch"); 
+      switches.addEventListener("change", (e) => { 
+        const images = document.getElementById('image'); 
+        images.setAttribute("src", window.location + "static/images/" + e.target.value + ".jpg"); 
+      }); 
+    </script>
+  </center>
+  
+
+<br />
+<br />
+<br />
+
+<center>
+  <h3>Simulated PV</h3>
+  <img src="/static/images/Image8.jpg" width="300" height="300" name="myImage2" id="image2" /> 
+  <form method="" action="" name="myForm2"> 
+    <select id="switch" size="8" name="switch"> 
+      <option value="Image8">13/10/2022</option> 
+      <option value="Image9">14/10/2022</option> 
+      <option value="Image10">15/10/2022</option> 
+      <option value="Image11">16/10/2022</option> 
+      <option value="Image12">17/10/2022</option> 
+      <option value="Image13">18/10/2022</option> 
+      <option value="Image14">19/10/2022</option> 
+    </select> 
+  </form> 
+  <script> 
+    const switches2 = document.getElementById("switch"); 
+    switches.addEventListener("change", (e) => { 
+      const images = document.getElementById('image'); 
+      images.setAttribute("src", window.location + "static/images/" + e.target.value + ".jpg"); 
+    }); 
+  </script> 
+</center>
+
+
+<br />
+<br />
+<br />
+<center>
+  <h2>About</h2>
+  <p>
+    “As part of my final year thesis, this web application aims to utilize this new wave of curiosity into PV energy generation and, in doing so, show the public how UCT is employing PV power systems to alleviate the stresses that UCT's high energy consumption places on the grid, decreasing repercussions of global warming exacerbated by such high energy consumption. This web application will help to educate the students of UCT about the PV generation of both PV plants situated on the UCT Upper Campus by showing their PV generation for a chosen week as well as the accuracy of the prediction software which can be used to predict future PV energy generation based off of the local weather climate above UCTs upper campus.”
+- Rudin Peter Hatton Hall
+  </p>
+<center>
+</body> 
+</html>
